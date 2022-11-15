@@ -11,7 +11,7 @@ import { DataComponent } from './data/data.component';
 import { LocationComponent } from './location/location.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DialogComponent } from './dialog/dialog/dialog.component'
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -25,13 +25,14 @@ import { DialogComponent } from './dialog/dialog/dialog.component'
     RegisterComponent,
     DataComponent,
     LocationComponent,
-    DialogComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
     
   ],
   providers: [],

@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   constructor() { }
-
+  v:any
   ngOnInit(): void {
   }
-
+  onClick(value:any){
+    this.v=value
+    console.log(this.v)
+    
+  }
 }

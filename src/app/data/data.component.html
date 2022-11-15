@@ -2,33 +2,19 @@
     <h2>Emergencies <small>Check</small></h2>
     <ul class="responsive-table">
         <li class="table-header">
-            <div class="col col-1">Id</div>
-            <div class="col col-2">Injured Name</div>
-            <div class="col col-3">Type </div>
-            <div class="col col-4">Time</div>
-            <div class="col col-5">Location </div>
-            <div class="col col-6">Resolved </div>
+            <div class="col col-1">Date</div>
+            <div class="col col-5">Longitude </div>
+            <div class="col col-5">Latitude </div>
 
         </li>
-        <li class="table-row" (click)="openTempDialog()">
-            <div class="col col-1" data-label="Id">1</div>
-            <div class="col col-2" data-label="Injured Name">John Doe</div>
-            <div class="col col-3" data-label="Type">ambulance</div>
-            <div class="col col-4" data-label="Time">12:00</div>
+        <li class="table-row" (click)="openTempDialog()" *ngFor="let al of alerts">
+            <div class="col col-1" data-label="date">{{al.date|date:'dd/MM/YYYY'}}</div>
             <a routerLink="/">
-                <div class="col col-5" data-label="Location">36.860307, 10.198929</div>
+                <div class="col col-1" data-label="long">{{al.long}}</div>
             </a>
-            <div class="col col-6"><input type="checkbox" name="Resolved"></div>
-        </li>
-        <li class="table-row">
-            <div class="col col-1" data-label="Id">2</div>
-            <div class="col col-2" data-label="Injured Name">Yassine Meriah</div>
-            <div class="col col-3" data-label="Type">Police</div>
-            <div class="col col-4" data-label="Time">13:00</div>
             <a routerLink="/">
-                <div class="col col-5" data-label="Location">36.860307, 10.198929</div>
+                <div class="col col-3" data-label="latt">{{al.latt}}</div>
             </a>
-            <div class="col col-6"><input type="checkbox" name="Resolved"></div>
         </li>
 
     </ul>
