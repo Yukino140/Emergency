@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 
 
-const URL ="http://127.0.0.1:3000/api/alert/"
+const URL ="http://127.0.0.1:3000/api/"
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +13,7 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
   getAlerts():Observable<any>{
-    return this.http.get(URL )
+    return this.http.get(URL +"alert/")
   }
   updateAlerts(alert:Alerts):Observable<any>{
     return this.http.post(URL + "/update",alert)
@@ -21,4 +21,6 @@ export class DataService {
   destroyAlerts(alerts:Alerts):Observable<any>{
     return this.http.post(URL + "/destroy",alerts)
   }
+  
+  
 }
